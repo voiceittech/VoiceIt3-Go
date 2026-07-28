@@ -10,6 +10,20 @@
 
 A Go wrapper for VoiceIt's API 3.0 featuring Voice + Face Verification and Identification.
 
+## Features
+
+This SDK wraps the full VoiceIt API 3.0 surface:
+
+- **User management** — create, fetch, check existence, and delete users; list the groups a user belongs to
+- **Group management** — create, fetch, check, and delete groups; add and remove users
+- **Voice, Face & Video enrollment** — enroll from a local file, in-memory byte slice, or remote URL (including split-video enrollment)
+- **Voice, Face & Video verification** — 1:1 authentication from file, byte slice, or URL
+- **Voice & Video identification** — 1:N matching of a sample against everyone in a group
+- **Notification webhooks** — register/remove callback URLs to receive asynchronous results
+- **Passive liveness & deepfake detection** — performed automatically by the API on face/video calls (API 3.0)
+
+Every call is available in file, byte-slice (`...ByByteSlice`), and URL (`...ByUrl`) variants where applicable. See the [HTTP API 3.0 Documentation](https://voiceit.io/documentation) for per-call parameters and response codes.
+
 ## Installation
 
 ```bash
